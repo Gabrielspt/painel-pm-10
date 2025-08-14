@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1b2a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1b263b;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffd60a;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #162447;
+}
+
+nav button {
+    flex: 1;
+    padding: 10px;
+    background-color: #162447;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button.active {
+    background-color: #1f4068;
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active {
+    display: block;
+}
+
+.motivation {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+    animation: fadeIn 3s;
+}
+
+#streak, #medals, #points, #nextTask, #level {
+    background-color: #1b263b;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #1b263b;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.materia {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.marked {
+    background-color: #2d6a4f;
+    color: white;
+    cursor: default;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#timerDisplay, #pomodoroTimer {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body.light {
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+body.light header {
+    background-color: #cce0ff;
+}
+
+body.light nav {
+    background-color: #99b3ff;
+}
+
+body.light nav button.active {
+    background-color: #6699ff;
+}
+
+body.light li {
+    background-color: #d9e6ff;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel PM 10.1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>💎 Painel de Estudos PM 10.1</h1>
+</header>
+
+<nav>
+    <button class="tab-button active" data-tab="dashboard">🏠 Dashboard</button>
+    <button class="tab-button" data-tab="materias">📚 Matérias</button>
+    <button class="tab-button" data-tab="progresso">📈 Progresso</button>
+    <button class="tab-button" data-tab="pomodoro">⏱ Pomodoro</button>
+    <button class="tab-button" data-tab="notas">📝 Notas</button>
+    <button class="tab-button" data-tab="links">🔗 Links</button>
+    <button class="tab-button" data-tab="config">⚙ Configurações</button>
+</nav>
+
+<section id="dashboard" class="active">
+    <p class="motivation" id="motivationText"></p>
+    <div id="streak">Dias seguidos estudando: 0</div>
+    <div id="medals">Medalhas: Nenhuma</div>
+    <div id="points">Pontos: 0</div>
+    <div id="nextTask">Próxima tarefa: Nenhuma</div>
+    <div id="level">Nível: Novato</div>
+    <div id="totalTime">Tempo total estudado: 0h 0m</div>
+</section>
+
+<section id="materias">
+    <input type="text" id="searchInput" placeholder="Pesquisar matéria...">
+    <ul id="subjectList"></ul>
+</section>
+
+<section id="progresso">
+    <h2>Progresso</h2>
+    <canvas id="progressChart"></canvas>
+    <canvas id="heatChart"></canvas>
+    <button id="resetButton">Resetar Semana</button>
+</section>
+
+<section id="pomodoro">
+    <h2>Pomodoro</h2>
+    <div>
+        <label for="pomodoroSelect">Escolha a duração:</label>
+        <select id="pomodoroSelect">
+            <option value="60">1 hora</option>
+            <option value="120" selected>2 horas</option>
+            <option value="180">3 horas</option>
+        </select>
+    </div>
+    <div class="pomodoro-buttons">
+        <button id="startPomodoro">Iniciar</button>
+        <button id="pausePomodoro">Pausar</button>
+        <button id="resetPomodoro">Resetar</button>
+    </div>
+    <p id="pomodoroTimer">120:00</p>
+    <div id="pomodoroSessionCount">Sessões concluídas: 0</div>
+</section>
+
+<section id="notas">
+    <h2>Notas Rápidas</h2>
+    <textarea id="quickNotes" placeholder="Escreva suas ideias ou resumos aqui..."></textarea>
+</section>
+
+<section id="links">
+    <h2>Links e Recursos</h2>
+    <ul id="linksList">
+        <li>Exemplo: Curso de Português - <a href="#">Clique aqui</a></li>
+    </ul>
+</section>
+
+<section id="config">
+    <h2>Configurações</h2>
+    <button id="themeButton">Alternar Tema Escuro/Claro</button>
+    <button id="exportButton">Exportar histórico (CSV)</button>
+    <div>
+        <label><input type="checkbox" id="hydrationAlert"> Lembrete de hidratação a cada 30 min</label>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
